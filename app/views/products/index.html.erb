@@ -6,5 +6,5 @@
 <!-- Iterate through each product -->
 <p><%= link_to "#{product.name}", "products/#{product.id}" %>, <%= product.description %></p>
 <!-- You'll want to see the Name of the product, and have it act as a link to it's show page -->
-<p><%= product.price_in_cents %></p>
+<p><%= product.formatted_price %></p>
 <% end %>
