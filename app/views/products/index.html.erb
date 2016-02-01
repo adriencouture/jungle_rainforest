@@ -1,0 +1,10 @@
+<h1>Products (<%= @products.length %>)</h1>
+
+<%= link_to 'New product', new_product_path %>
+
+<%= @products.each do |product| %>
+<!-- Iterate through each product -->
+<p><%= link_to "#{product.name}", "products/#{product.id}" %>, <%= product.description %></p>
+<!-- You'll want to see the Name of the product, and have it act as a link to it's show page -->
+<p><%= product.price_in_cents %></p>
+<% end %>
