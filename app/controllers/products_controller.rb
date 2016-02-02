@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      redirect_to '/' # products_url
+      redirect_to products_url # '/' Would this work?
     else
       render :new
     end
@@ -39,7 +39,7 @@ class ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
-    redirect_to '/'
+    redirect_to products_path
   end
 
   private
